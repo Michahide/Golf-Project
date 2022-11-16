@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
+    bool entered = false;
+
+    public bool Entered { get => entered; }
+
     private void OnTriggerEnter(Collider other) {
         Debug.Log("Bola masuk");
+        entered = true;
     }
 }
